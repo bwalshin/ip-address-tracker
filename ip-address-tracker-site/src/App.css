@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  --primary: white;
+  --secondary: black;
+  --verydarkgrey: hsl(0, 0%, 17%);
+  --darkgrey: hsl(0, 0%, 59%);
+}
+
+body {
+  color: hsl(0, 0%, 17%);
+  font-family: 'Rubik', sans-serif;
+}
+
+.headerContent {
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+}
+
+.headerBackground {
+  background-image: url('/public/images/pattern-bg.png');
+  background-size: cover;
+  min-height: 250px;
+  position: relative;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  margin: 1rem 0;
+  width: 50%;
+}
+
+.input {
+  padding: 1rem;
+  border-radius: 15px 0 0 15px;
+  font-size: 1rem;
+  flex-grow: 1;
+  color: var(--verydarkgrey);
+}
+
+.btn {
+  border-radius: 0 15px 15px 0;
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--primary);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  max-width: 10%;
+}
+
+.plate {
+  background-color: var(--primary);
+  width: 75%;
+  border-radius: 15px;
+  color: var(--verydarkgrey);
+}
+
+.plate .container {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.plate .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.col {
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+h1 {
+  color: var(--verydarkgrey)
+}
+
+h2 {
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+h4 {
+  margin: 0.3em 0em;
+  color: var(--darkgrey);
+}
+
+p {
+  margin: 0.4em 0em;
+  font-size: 0.75em;
+  line-height: 1.6em;
+}

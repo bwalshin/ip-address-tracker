@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+h1,p {
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+
+h1 {
+  font-size: 25px;
+  padding-top: 20px
+}
+
+form.p {
+  color: hsl(0, 0%, 59%)
+}
+
+.container {
+  display: grid;
+  grid-template-columns: .5fr 1fr 1fr 1fr 1fr .5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 7fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.Header {
+  grid-area: 1 / 3 / 3 / 5;
+  text-align: center
+}
+
+.Results {
+  grid-area: 3 / 2 / 5 / 6;
+  background-color: grey;
+}
+
+.Banner {
+  grid-area: 1 / 1 / 4 / 7;
+  background-image: url("./images/pattern-bg.png");
+  background-repeat: no-repeat;
+  padding-bottom: 10rem;
+}
+
+.Map {
+  grid-area: 4 / 1 / 6 / 7;
+}
+
+.form {
+  width: 100%
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
