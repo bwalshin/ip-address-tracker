@@ -13,6 +13,7 @@ export default function IPcall() {
         // `https://geo.ipify.org/api/v2/country,city?`
       )
         .then((res) => res.json())
+        // .then((ipData... line is throwing "undefined" error
         .then((ipData) => setApp((curr) => ({ ...curr, ipData }))),
     {
       cacheTime: Infinity,
