@@ -70,14 +70,24 @@ body {
 .plate .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 .col {
+  max-width: 25%;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
   border: 1px solid rgba(86,61,124,.2);
+  justify-content: center;
+  display: flex;
+  
+}
+
+.text-center {
+  text-align: center;
 }
 
 h1 {
