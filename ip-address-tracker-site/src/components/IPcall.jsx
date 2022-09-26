@@ -5,16 +5,16 @@ import { AppContext } from '../App';
 
 export default function IPcall() {
   const { app, setApp } = useContext(AppContext);
+  const ipAddress = app?.input || '8.8.8.8';
+  console.log('ipAddress', ipAddress);
   const { status, data, error, isFetching } = useQuery(
-    [app.input], () =>
+    [ipAddress],
+    () =>
       fetch(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_aJaHvmwrQfEpHVc04N77e2UIbFBNX&ipAddress=${app.input}`
-        // "https://geo.ipify.org/api/v2/country,city?apiKey=at_aJaHvmwrQfEpHVc04N77e2UIbFBNX&ipAddress=8.8.8.8"
-        // `https://geo.ipify.org/api/v2/country,city?`
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_aJaHvmwrQfEpHVc04N77e2UIbFBNX&ipAddress=${ipAddress}`
       )
         .then((res) => res.json())
-        // .then((ipData... line is throwing "undefined" error
-        .then((ipData) => setApp((curr) => ({ ...curr, ipData }))),
+        .then((ipData) => setApp((curr) => ({ ...curr, ipData })) || ipData),
     {
       cacheTime: Infinity,
       refecthOnMount: false,
@@ -24,7 +24,7 @@ export default function IPcall() {
   );
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className='plate'>Error: {error.message}</div>;
   }
 
   if (status === 'loading') {
